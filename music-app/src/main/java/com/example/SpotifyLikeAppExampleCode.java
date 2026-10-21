@@ -102,6 +102,11 @@ public class SpotifyLikeAppExampleCode {
         break;
       case "l":
         System.out.println("-->Library<--");
+        for (int i = 0; i < library.length; i++) {
+          System.out.println((i + 1) + ". "
+              + library[i].name() + " - "
+              + library[i].artist());
+        }
         break;
       case "p":
         System.out.println("-->Play<--");
