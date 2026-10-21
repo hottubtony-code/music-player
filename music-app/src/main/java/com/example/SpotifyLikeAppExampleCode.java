@@ -67,7 +67,7 @@ public class SpotifyLikeAppExampleCode {
       userInput = userInput.toLowerCase();
 
       // do something
-      handleMenu(userInput, library);
+      handleMenu(userInput, library, input);
     }
 
     // close the scanner
@@ -92,7 +92,7 @@ public class SpotifyLikeAppExampleCode {
   /*
    * handles the user input for the app
    */
-  public static void handleMenu(String userInput, Song[] library) {
+  public static void handleMenu(String userInput, Song[] library, Scanner input) {
     switch (userInput) {
       case "h":
         System.out.println("-->Home<--");
@@ -106,6 +106,21 @@ public class SpotifyLikeAppExampleCode {
           System.out.println((i + 1) + ". "
               + library[i].name() + " - "
               + library[i].artist());
+        }
+        System.out.print("Enter a song number, or 0 to return: ");
+        try {
+          int choice = Integer.parseInt(input.nextLine().trim());
+
+          if (choice >= 1 && choice <= library.length) {
+            System.out.println("Now playing: "
+                + library[choice - 1].name() + " - "
+                + library[choice - 1].artist());
+            play(library, choice - 1);
+          } else if (choice != 0) {
+            System.out.println("That song number is not in the library.");
+          }
+        } catch (NumberFormatException e) {
+          System.out.println("Please enter a whole number.");
         }
         break;
       case "p":
@@ -124,10 +139,13 @@ public class SpotifyLikeAppExampleCode {
    * plays an audio file
    */
   public static void play(Song[] library) {
+    play(library, 3);
+  }
+
+  public static void play(Song[] library, int i) {
     // open the audio file
 
     // get the filePath and open a audio file
-    final Integer i = 3;
     final String filename = library[i].fileName();
     final String filePath = directoryPath + "/wav/" + filename;
     final File file = new File(filePath);
