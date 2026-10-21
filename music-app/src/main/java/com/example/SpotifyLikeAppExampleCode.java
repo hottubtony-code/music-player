@@ -98,7 +98,45 @@ public class SpotifyLikeAppExampleCode {
         System.out.println("-->Home<--");
         break;
       case "s":
-        System.out.println("-->Search by title<--");
+        System.out.print("Enter part of a song title: ");
+        String search = input.nextLine().trim().toLowerCase();
+        boolean found = false;
+
+        if (search.isEmpty()) {
+          System.out.println("Please enter a title.");
+          break;
+        }
+
+        for (int i = 0; i < library.length; i++) {
+          if (library[i].name().toLowerCase().contains(search)) {
+            System.out.println((i + 1) + ". "
+                + library[i].name() + " - "
+                + library[i].artist());
+            found = true;
+          }
+        }
+
+        if (!found) {
+          System.out.println("No matching songs found.");
+        } else {
+          System.out.print("Enter a result's song number, or 0 to return: ");
+          try {
+            int selection = Integer.parseInt(input.nextLine().trim());
+
+            if (selection >= 1 && selection <= library.length
+                && library[selection - 1].name()
+                    .toLowerCase().contains(search)) {
+              System.out.println("Now playing: "
+                  + library[selection - 1].name() + " - "
+                  + library[selection - 1].artist());
+              play(library, selection - 1);
+            } else if (selection != 0) {
+              System.out.println("Please choose a song from the search results.");
+            }
+          } catch (NumberFormatException e) {
+            System.out.println("Please enter a whole number.");
+          }
+        }
         break;
       case "l":
         System.out.println("-->Library<--");
