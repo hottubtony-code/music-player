@@ -203,6 +203,18 @@ public class SpotifyLikeAppExampleCode {
       audioClip.open(in);
       audioClip.setMicrosecondPosition(0);
       audioClip.loop(Clip.LOOP_CONTINUOUSLY);
+      System.out.println("Title: " + library[i].name());
+      System.out.println("Artist: " + library[i].artist());
+
+      if (library[i].year() == 0) {
+        System.out.println("Year: Unknown");
+      } else {
+        System.out.println("Year: " + library[i].year());
+      }
+
+      System.out.println("Genre: " + library[i].genre());
+      System.out.println("File path: " + filePath);
+      System.out.println();
     } catch (Exception e) {
       e.printStackTrace();
     }

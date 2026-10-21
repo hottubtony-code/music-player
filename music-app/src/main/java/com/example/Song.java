@@ -5,6 +5,16 @@ public class Song {
   private String name;
   private String artist;
   private String fileName;
+  private int year;
+  private String genre;
+
+  public int year() {
+    return year;
+  }
+
+  public String genre() {
+    return genre;
+  }
 
   // serializes attributes into a string
   public String toString() {

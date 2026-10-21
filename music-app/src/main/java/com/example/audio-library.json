@@ -2,26 +2,35 @@
   {
     "name": "Teach Me How to Dougie",
     "artist": "Cali Swag District",
-    "fileName": "dougie-crop.wav"
+    "fileName": "dougie-crop.wav",
+    "year": 2010,"genre": "Hip-hop"
   },
   {
     "name": "Could've Been (Tik Tok Remix)",
     "artist": "H.E.R.",
-    "fileName": "her-crop.wav"
+    "fileName": "her-crop.wav",
+    "year": 0,
+    "genre": "R&B"
   },
   {
     "name": "On Me",
     "artist": "Lil Baby",
-    "fileName": "lil-baby-crop.wav"
+    "fileName": "lil-baby-crop.wav",
+    "year": 2020,
+    "genre": "Hip-hop"
   },
   {
     "name": "Mo Money Mo Problems",
     "artist": "Notorios BIG",
-	  "fileName": "biggie-crop.wav"
+	  "fileName": "biggie-crop.wav",
+    "year": 1997,
+    "genre": "Hip-hop"
   },
   {
     "name": "Industry Baby",
     "artist": "Lil Nas X",
-    "fileName": "lil-nas-x-crop.wav"
+    "fileName": "lil-nas-x-crop.wav",
+    "year": 2021,
+    "genre": "Hip-hop"
   }
 ]
