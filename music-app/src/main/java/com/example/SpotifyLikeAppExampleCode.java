@@ -86,7 +86,7 @@ public class SpotifyLikeAppExampleCode {
     System.out.println("[Q]uit");
 
     System.out.println("");
-    System.out.print("Enter q to Quit:");
+    System.out.print("Enter a choice (h, s, l, p, or q): ");
   }
 
   /*
@@ -96,6 +96,10 @@ public class SpotifyLikeAppExampleCode {
     switch (userInput) {
       case "h":
         System.out.println("-->Home<--");
+        System.out.println("Welcome to your music player!");
+        System.out.println("Songs in your library: " + library.length);
+        System.out.println("Choose s to search or l to browse your library.");
+        System.out.println();
         break;
       case "s":
         System.out.print("Enter part of a song title: ");
