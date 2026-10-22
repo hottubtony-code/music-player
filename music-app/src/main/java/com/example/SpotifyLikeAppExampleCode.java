@@ -167,6 +167,11 @@ public class SpotifyLikeAppExampleCode {
         break;
       case "q":
         System.out.println("-->Quit<--");
+        if (audioClip != null) {
+          audioClip.stop();
+          audioClip.close();
+          audioClip = null;
+        }
         break;
       default:
         break;
