@@ -32,5 +32,47 @@
     "fileName": "lil-nas-x-crop.wav",
     "year": 2021,
     "genre": "Hip-hop"
+  },
+    {
+    "name": "Thief in the Night",
+    "artist": "Kevin MacLeod",
+    "fileName": "thief-in-the-night-crop.wav",
+    "year": 2016,
+    "genre": "Reggae"
+  },
+    {
+    "name": "Maccary Bay",
+    "artist": "Kevin MacLeod",
+    "fileName": "maccary-bay-crop.wav",
+    "year": 2015,
+    "genre": "Reggae"
+  },
+    {
+    "name": "Gonna Start",
+    "artist": "Kevin MacLeod",
+    "fileName": "gonna-start-crop.wav",
+    "year": 2014,
+    "genre": "Reggae"
+  },
+    {
+    "name": "Dub Eastern",
+    "artist": "Kevin MacLeod",
+    "fileName": "dub-eastern-crop.wav",
+    "year": 2012,
+    "genre": "Reggae"
+  },
+    {
+    "name": "Mandeville",
+    "artist": "Kevin MacLeod",
+    "fileName": "mandeville-crop.wav",
+    "year": 2011,
+    "genre": "Reggae"
+  },
+    {
+    "name": "Montego",
+    "artist": "Kevin MacLeod",
+    "fileName": "montego-crop.wav",
+    "year": 2011,
+    "genre": "Reggae"
   }
 ]
