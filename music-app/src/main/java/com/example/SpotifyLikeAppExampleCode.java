@@ -46,7 +46,9 @@ public class SpotifyLikeAppExampleCode {
    * 
    */
 
-  private static String directoryPath = "C:/Users/tyeis/JavaProjects/music-player-clean/music-app/src/main/java/com/example/";
+  private static String directoryPath = new File("music-app/src/main/java/com/example").isDirectory()
+      ? "music-app/src/main/java/com/example"
+      : "src/main/java/com/example";
 
   // "main" makes this class a java app that can be executed
   public static void main(final String[] args) {
